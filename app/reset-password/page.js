@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation"; // Importer useSearchParams
 import axios from "axios";
@@ -42,34 +42,36 @@ const ResetPasswordPage = () => {
   };
 
   return (
-    <div className="body">
-      <div style={{ maxWidth: "400px", margin: "auto", padding: "2rem" }}>
-        <div className="login_top pt-4">
-          <Image
-            src="/images/Link → SVG.png  "
-            alt="Link-svg"
-            width={25}
-            height={25}
-            className="img_link"
-          />
-          <p className="login_name">RED PRODUCT</p>
-        </div>
-        <form onSubmit={handleSubmit} className="pagelogin mt-4">
-          <div className="div_form">
-            <label>Nouveau mot de passe :</label>
-            <input
-              type="password"
-              value={newPassword}
-              onChange={(e) => setNewPassword(e.target.value)}
-              required
-              autoComplete="new-password" // Ajout de l'attribut ici
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="body">
+        <div style={{ maxWidth: "400px", margin: "auto", padding: "2rem" }}>
+          <div className="login_top pt-4">
+            <Image
+              src="/images/Link → SVG.png"
+              alt="Link-svg"
+              width={25}
+              height={25}
+              className="img_link"
             />
+            <p className="login_name">RED PRODUCT</p>
           </div>
-          <button type="submit">Réinitialiser</button>
-        </form>
-        <ToastContainer />
+          <form onSubmit={handleSubmit} className="pagelogin mt-4">
+            <div className="div_form">
+              <label>Nouveau mot de passe :</label>
+              <input
+                type="password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                required
+                autoComplete="new-password" // Ajout de l'attribut ici
+              />
+            </div>
+            <button type="submit">Réinitialiser</button>
+          </form>
+          <ToastContainer />
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 };
 
