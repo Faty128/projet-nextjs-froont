@@ -1,0 +1,78 @@
+.sidebar {
+    background-color: #343a40;
+    color: white;
+    width: 20%;
+    /* height: 100vh !important; */
+    padding: 2rem;
+
+  }
+
+  .sidebar_dashboard{
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    justify-content: space-between;
+  }
+
+  .Profil_muhmd{
+    display: flex;
+    margin-top: 18rem;
+    gap: 1rem;
+  }
+  .Profil_muhmd img{
+    margin-top: -0.5rem;
+  }
+  
+  .sidebar h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+  }
+  .div_redproduct{
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .logo_hotel{
+    height: 30px;
+  }
+
+  .sidebar .nav-link{
+    font-size: 1.2rem;
+  }
+  .sidebar .nav-link a{
+    font-size: 1rem;
+  }
+   .nav-item {
+    display: flex;
+    margin-left: -1rem;
+  }
+  .nav-item p{
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    color: #fff; 
+    font-weight: 500;
+}
+.nav-link:hover {
+  color: #fff; 
+  font-weight: 500;
+}
+
+  .nav-link.active {
+    background: gainsboro; 
+    width: 100%;
+    color: #495057; /* Couleur du texte en gris */
+}
+
+.nav-link.active:hover {
+  background: gainsboro; 
+    color: #495057; /* Couleur au survol */
+}
+
+  
