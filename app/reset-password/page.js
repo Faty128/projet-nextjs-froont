@@ -29,7 +29,7 @@ const ResetPasswordPage = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3001/api/auth/reset-password/${token}`,
+        `https://simple-crud-app-backend-fotn.onrender.com/api/auth/reset-password/${token}`,
         { newPassword }
       );
       toast.success(response.data.message);

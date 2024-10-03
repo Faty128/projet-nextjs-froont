@@ -2,7 +2,7 @@ export default function Card({ hotel }) {
   return (
       <div className="col-md-3">
           <div className="card shadow-sm h-100">
-              <img src={`http://localhost:3001/${hotel.image}`} className="card-img-top" alt={`Image de ${hotel.name}`} />
+              <img src={`https://simple-crud-app-backend-fotn.onrender.com/${hotel.image}`} className="card-img-top" alt={`Image de ${hotel.name}`} />
               <div className="card-body">
                   <p className="card-text" style={{ fontSize: '0.7rem', color: 'red' }}>{hotel.location}</p>
                   <h5 className="card-title">{hotel.name}</h5>

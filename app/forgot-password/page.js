@@ -15,7 +15,7 @@ const Page = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/auth/forgot-password",
+        "https://simple-crud-app-backend-fotn.onrender.com/auth/forgot-password",
         {
           email,
         }

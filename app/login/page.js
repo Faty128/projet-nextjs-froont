@@ -16,7 +16,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/login', {
+      const response = await axios.post('https://simple-crud-app-backend-fotn.onrender.com/api/auth/login', {
         email,
         password,
       }, {

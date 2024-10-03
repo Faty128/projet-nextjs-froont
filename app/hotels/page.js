@@ -12,7 +12,7 @@ export default function Hotels() {
     // Fonction pour ajouter un nouvel hôtel
     const addHotel = async (formData) => {
         try {
-            const response = await axios.post('http://localhost:3001/api/hotels', formData);
+            const response = await axios.post('https://simple-crud-app-backend-fotn.onrender.com/api/hotels', formData);
             console.log("Nouvel hôtel ajouté :", response.data);
             setHotels([...hotels, response.data]);
         } catch (error) {
@@ -24,7 +24,7 @@ export default function Hotels() {
     useEffect(() => {
         const fetchHotels = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/hotels');
+                const response = await axios.get('https://simple-crud-app-backend-fotn.onrender.com/api/hotels');
                 setHotels(response.data);
             } catch (error) {
                 console.error("Erreur lors du chargement des hôtels :", error);

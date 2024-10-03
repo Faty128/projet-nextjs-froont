@@ -26,7 +26,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const response = await axios.post('http://localhost:3001/api/auth/register', {
+    const response = await axios.post('https://simple-crud-app-backend-fotn.onrender.com/api/auth/register', {
       name,
       email,
       password,

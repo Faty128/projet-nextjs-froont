@@ -37,7 +37,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/dashboard/stats');
+        const response = await axios.get('https://simple-crud-app-backend-fotn.onrender.com/api/dashboard/stats');
         setStats(response.data); // Les données se trouvent directement dans response.data
       } catch (error) {
         console.error('Erreur lors de la récupération des statistiques:', error);
