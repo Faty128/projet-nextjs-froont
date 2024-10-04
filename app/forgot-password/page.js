@@ -50,7 +50,7 @@ const Page = () => {
         </div>
         <form onSubmit={handleSubmit} className="pagelogin">
           <h1 className="titree">Mot de passe oublié</h1>
-          <p className="div_link2">
+          <p className="mt-3">
             Entrez votre adresse e-mail ci-dessous et nous vous enverrons des
             instructions sur la façon de modifier votre mot de passe.
           </p>
@@ -63,7 +63,7 @@ const Page = () => {
               required
             />
           </div>
-          <button type="submit">Envoyer</button>
+          <button className="mt-4" type="submit">Envoyer</button>
         </form>
         {message && <p>{message}</p>}
         <ToastContainer />
