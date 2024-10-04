@@ -64,7 +64,7 @@ const ResetPasswordPage = () => {
               autoComplete="new-password"
             />
           </div>
-          <button type="submit">Réinitialiser</button>
+          <button className="mt-4" type="submit">Réinitialiser</button>
         </form>
         <ToastContainer />
       </div>

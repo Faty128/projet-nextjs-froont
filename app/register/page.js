@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
     <div style={{ maxWidth: '400px', margin: 'auto', padding: '10px' }}>
       <div className='login_top'>
           <Image 
-            src="/images/Link → SVG.png" // Chemin à partir du dossier public
+            src="/images/Link → SVG.png"
             alt="Link-svg"
             width={25} 
             height={25} 
