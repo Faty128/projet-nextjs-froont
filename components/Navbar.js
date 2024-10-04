@@ -37,11 +37,11 @@ export default function Navbar() {
                 </a> 
                 {/* Barre de recherche */} 
                 <form className="d-flex ms-auto search"> 
-                    <div className="search_icon" style={{ paddingLeft: "0rem", fontSize: '1.2rem' }}> 
+                    <div className="search_icon" style={{ paddingLeft: "-0.2rem", fontSize: '1.2rem' }}> 
                         <FaSearch /> 
                     </div> 
                     <input 
-                        className="form me-3" 
+                        className="form me-2" 
                         type="search" 
                         placeholder="Rechercher" 
                         aria-label="Search" 

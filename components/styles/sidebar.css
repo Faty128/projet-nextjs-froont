@@ -1,9 +1,9 @@
 .sidebar {
     background-color: #343a40;
     color: white;
-    width: 20%;
-    /* height: 100vh !important; */
-    padding: 2rem;
+    width: 100%;
+    height: 100% !important;
+    padding: 3rem;
 
   }
 
@@ -20,32 +20,38 @@
     gap: 1rem;
   }
   .Profil_muhmd img{
-    margin-top: -0.5rem;
+    margin-top: -0.7rem;
   }
   
-  .sidebar h2 {
+  /* .sidebar h2 {
     font-size: 24px;
     font-weight: bold;
   }
-  
+   */
   .sidebar .nav-link:hover {
     background-color: #495057;
     border-radius: 5px;
   }
   .div_redproduct{
-    margin-left: 1rem;
+    font-size: 14px;
+    margin-left: 0.5rem;
     margin-top: 0.5rem;
   }
 
   .logo_hotel{
-    height: 30px;
+    height: 25px;
+    margin-left: -1rem;
+  }
+
+  .div_princ{
+    margin-left: -0.5rem;
   }
 
   .sidebar .nav-link{
     font-size: 1.2rem;
   }
   .sidebar .nav-link a{
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
    .nav-item {
     display: flex;
@@ -75,4 +81,41 @@
     color: #495057; /* Couleur au survol */
 }
 
+.sidebar_wrapper {
+  position: relative;
+}
+
+.close_icone {
+  position: absolute;
+  right: 0.5rem;
+  /* left: 2rem; */
+  top: 3rem;
+  border: none;
+  color: #fff;
+  background-color: #383838;
+  width: 1.5rem;
+  /* border: 1px solid #e5e7eb; */
+  border-radius: 50%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(50%);
+  font-size: 1.1rem;
+}
+/* .btn:hover {
+  color: #000;
+  background-color: #fff;
   
+} */
+
+[data-collapse="true"] {
+  width: 5.3rem;
+}
+
+[data-collapse="true"] .nav-link p,
+[data-collapse="true"] .div_redproduct,
+[data-collapse="true"] .div_princ,
+[data-collapse="true"] .div_personel{
+  display: none;
+}
