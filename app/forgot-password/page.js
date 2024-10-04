@@ -49,7 +49,7 @@ const Page = () => {
           <p className="login_name">RED PRODUCT</p>
         </div>
         <form onSubmit={handleSubmit} className="pagelogin">
-          <h1 className="h1">Mot de passe oublié</h1>
+          <h1 className="titree">Mot de passe oublié</h1>
           <p className="div_link2">
             Entrez votre adresse e-mail ci-dessous et nous vous enverrons des
             instructions sur la façon de modifier votre mot de passe.

@@ -56,7 +56,7 @@ const LoginPage = () => {
           <p className='login_name'>RED PRODUCT</p>
         </div>
         <form onSubmit={handleSubmit} className='pagelogin'>
-          <h1 className='h1'>Connectez-vous en tant que Admin</h1>
+          <h1 className='titree'>Connectez-vous en tant que Admin</h1>
           
           <div className='div_form'>
             <label>Email :</label>

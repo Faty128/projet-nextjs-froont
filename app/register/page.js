@@ -61,7 +61,7 @@ const handleSubmit = async (e) => {
             <p className='login_name'>RED PRODUCT</p>
       </div>
       <form onSubmit={handleSubmit} className='pagelogin'>
-        <h1 className='h1'>Inscrivez-vous en tant que Admin</h1>
+        <h1 className='titree'>Inscrivez-vous en tant que Admin</h1>
         <div className='div_form'>
           <label>Nom :</label>
           <input
