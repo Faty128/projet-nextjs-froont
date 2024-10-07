@@ -4,17 +4,20 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import axios from 'axios'; // Importer Axios
-import { ToastContainer, toast } from 'react-toastify'; // Importer ToastContainer et toast
-import 'react-toastify/dist/ReactToastify.css'; // Importer les styles de react-toastify
+import axios from 'axios'; 
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false); 
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); 
+
     try {
       const response = await axios.post('https://simple-crud-app-backend-fotn.onrender.com/api/auth/login', {
         email,
@@ -38,7 +41,9 @@ const LoginPage = () => {
       router.push('/dashboard');
     } catch (error) {
       console.error(error);
-      toast.error('Échec de la connexion. Vérifiez vos identifiants.'); // Utiliser toast pour afficher l'erreur
+      toast.error('Échec de la connexion. Vérifiez vos identifiants.'); 
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -47,7 +52,7 @@ const LoginPage = () => {
       <div style={{ maxWidth: '400px', margin: 'auto', padding: '0.5rem'}}>
         <div className='login_top'>
           <Image 
-            src="/images/Link → SVG.png" // Chemin à partir du dossier public
+            src="/images/Link → SVG.png" 
             alt="Link-svg"
             width={25} 
             height={25} 
@@ -55,6 +60,9 @@ const LoginPage = () => {
           />
           <p className='login_name'>RED PRODUCT</p>
         </div>
+
+        {loading && <div className="loader"></div>} 
+
         <form onSubmit={handleSubmit} className='pagelogin'>
           <h1 className='titree'>Connectez-vous en tant que Admin</h1>
           
@@ -85,7 +93,9 @@ const LoginPage = () => {
               <p>Garder moi connecté</p>
             </label>
           </div>
-          <button type="submit">Se connecter</button>
+          <button type="submit" disabled={loading}> {/* Désactiver le bouton pendant le chargement */}
+            {loading ? 'Chargement...' : 'Se connecter'} {/* Afficher le texte en fonction du chargement */}
+          </button>
         </form>
         
         <div className='div_link'>

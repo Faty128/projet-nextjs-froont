@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaImage } from "react-icons/fa";
 
 export default function HeaderHotels({ onAddHotel }) {
   const [modalShow, setModalShow] = useState(false);
@@ -82,7 +83,7 @@ export default function HeaderHotels({ onAddHotel }) {
                 onClick={() => setModalShow(false)}
                 aria-label="Close"
               >
-                {/* <span aria-hidden="true">&times;</span> */}
+                <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div className="row modal-body">
@@ -130,24 +131,10 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                     />
                   </div>
-                  <div className="mt-3">
-                    <label htmlFor="hotelImage" className="form-label">
-                      Ajouter une photo
-                    </label>
-                    <input
-                      type="file"
-                      className="form"
-                      id="hotelImage"
-                      name="image"
-                      accept="image/*"
-                      onChange={handleFileChange}
-                      required
-                    />
-                  </div>
                 </div>
 
                 <div className="col-md-6">
-                  <div className="mt-1">
+                  <div className="mb-3">
                     <label htmlFor="hotelPhone" className="form-label">
                       Numéro de téléphone
                     </label>
@@ -161,7 +148,7 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                     />
                   </div>
-                  <div className="mt-4">
+                  <div className="mb-3">
                     <label htmlFor="hotelPrice" className="form-label">
                       Prix par nuit
                     </label>
@@ -175,7 +162,7 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                     />
                   </div>
-                  <div className="mt-4">
+                  <div className="mb-3">
                     <label htmlFor="hotelCurrency" className="form-label">
                       Devise
                     </label>
@@ -191,18 +178,44 @@ export default function HeaderHotels({ onAddHotel }) {
                       <option value="EUR">EUR</option>
                     </select>
                   </div>
-                  <div className="mt-5">
-                    <button type="submit" className="btn3 btn-secondary">
-                      Enregistrer
-                    </button>
+                </div>
+
+               
+              </form>
+              <div className="mt-3 upload-container">
+                  <label htmlFor="hotelImage" className="form-label">
+                    Ajouter une photo
+                  </label>
+                  <div className="upload-input" onClick={() => document.getElementById('hotelImage').click()}>
+                    <input
+                      type="file"
+                      className="upload-input-file"
+                      id="hotelImage"
+                      name="image"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                      required
+                      style={{ display: "none" }}
+                    />
+                    <div className="upload-icon">
+                    <FaImage />
+
+                    </div>
+                    <span className="upload-text">Ajouter un photo</span>
                   </div>
                 </div>
-              </form>
+
+                <div className="mt-5">
+                  <button type="submit" className="btn3 btn-secondary">
+                    Enregistrer
+                  </button>
+                </div>
             </div>
           </div>
         </div>
         <ToastContainer autoClose={2000} />
       </div>
+
       {modalShow && (
         <div
           className="modal-backdrop fade show"

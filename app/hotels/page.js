@@ -38,7 +38,7 @@ export default function Hotels() {
     return (
         <>
             <Navbar />
-            <div className="container-fluid mt-5">
+            <div className="container-fluid row row-cols-md-9">
                 <HeaderHotels onAddHotel={addHotel} />
                 <div className="row row-cols-md-3 g-4">
                     {hotels.map((hotel, index) => (
