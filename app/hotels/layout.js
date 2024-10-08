@@ -8,7 +8,7 @@ export default function HotelsLayout({
   return (
     <div className="d-flex">
       <Sidebar/>
-      <div className="div_main row row-cols-md-9">
+      <div className="div_main row rows-cols-md-9">
         {children}  {/* Contenu des pages des hôtels */}
       </div>
     </div>

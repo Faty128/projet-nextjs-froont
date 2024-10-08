@@ -66,7 +66,7 @@ export default function Navbar() {
                     </div>
                 )}
 
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center profillle">
                     <div className="position-relative me-3">
                         <MdOutlineNotifications style={{ fontSize: "1.6rem" }} />
                         <span className="badge" style={{ position: 'absolute', top: '-9px', right: '-10px', backgroundColor: 'orange', color: 'white', borderRadius: '35%', padding: '0.2rem 0.4rem', fontSize: '0.8rem' }}>

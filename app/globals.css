@@ -13,10 +13,6 @@
   color: white;
   font-family: "Roboto", sans-serif;
 }
-/* body .sidebar{
-  background: #383838;
-} */
-/* app/login/login.module.css */
 
 .pagelogin {
   background-color: #fff;
@@ -25,9 +21,9 @@
   max-width: 400px;
   margin: auto;
   padding: 1.5rem;
-  border: 1px solid #ccc; /* Bordure autour du formulaire */
-  border-radius: 8px;     /* Coins arrondis */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  border: 1px solid #ccc;
+  border-radius: 8px;   
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .login_top{
@@ -65,7 +61,7 @@ form {
 }
 
 label {
-  margin-bottom: 5px; /* Espacement entre le label et le champ */
+  margin-bottom: 5px; 
   display: block;
 }
 
@@ -89,19 +85,17 @@ input[type="check"] {
   border-right: none;
   border-bottom: 1px solid #ccc;
   border-radius: 2px;
-  box-sizing: border-box; /* Inclut le padding dans la largeur */
+  box-sizing: border-box;
 }
 
-/* Suppression des bordures inférieures */
 input:focus {
-  outline: none; /* Suppression du contour par défaut */
-  border-color: #000; /* Couleur de la bordure au focus */
+  outline: none; 
+  border-color: #000;
 }
 
-/* Cacher la bordure de l'input de type "check" */
 input[type="check"] {
-  width: auto; /* Réduit la largeur */
-  margin-left: 0; /* Ajuste la marge pour un bon alignement */
+  width: auto; 
+  margin-left: 0; 
 }
 
 /* Espacement pour le bouton */
@@ -116,7 +110,7 @@ button {
 }
 
 button:hover {
-  background-color: grey; /* Couleur au survol */
+  background-color: grey;
 }
 
 .div_link{
@@ -131,7 +125,6 @@ button:hover {
 
 .div_link2{
   margin-top: -0.3rem;
-
 }
 
 /* Fin de accieul */
@@ -139,12 +132,20 @@ button:hover {
 .div_main{
   display: flex;
   background-color: #e0dcdc;
-  margin-left: 12px;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
- margin: auto;
+  margin: auto;
+}
+.div_main1{
+  display: flex;
+  background-color: #e0dcdc;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 h1, h5 {
@@ -152,15 +153,14 @@ h1, h5 {
 }
 
 /* Navbar styles */
-
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   background-color: #fff;
-  width: 100%; /* Prend toute la largeur de la page */
-  z-index: 1000; /* Assure-toi qu'elle est au-dessus d'autres éléments */
+  width: 100%; 
+  z-index: 1000;
 }
 
 .search{
@@ -179,24 +179,19 @@ h1, h5 {
   top: 0.2rem;
 }
 
-.header-dashboard{
-  padding: 5px;
+.header_dashboard{
+  /* padding: 5px; */
   margin: 0;
   padding: 0.3rem 1rem;
   height: 25%;
-  margin-top: 99px;
-
+  margin-top: 30px;
   background-color: #fff;
 }
 
 .headerhotel{
-  /* padding-top: 4rem; */
   padding-top: 7rem;
-
   margin: 0;
   height: 15%;
-  /* margin-top: 5rem; */
-
   background-color: #fff;
 }
 
@@ -213,7 +208,7 @@ h1, h5 {
 
 .navbar-brand {
   display: flex;
- margin-left:   18.5rem;
+  margin-left:   18.5rem;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -226,8 +221,6 @@ h1, h5 {
   outline: none;
 }
 
-
-
 .navbar .btn-outline-primary {
   border-radius: 20px;
 }
@@ -239,12 +232,17 @@ h1, h5 {
 /* Stats Card styles */
 .card {
   transition: transform 0.3s ease;
-  max-width: 100%;
+  width: 100%;
   height: 50px;
 }
 
 .card:hover {
   transform: scale(1.05);
+}
+
+.hotels_stats a{
+  text-decoration: none;
+  width: 100vh;
 }
 
 .close{
@@ -255,6 +253,7 @@ margin-left: auto;
 font-size: 1rem;
 font-weight: bold;
 }
+
 .close:hover{
   border: none;
   background: none;
@@ -306,13 +305,13 @@ input.form-select{
 }
 
 .loader {
-  border: 5px solid #f3f3f3; /* Couleur de fond */
-  border-top: 5px solid #3498db; /* Couleur de l'animation */
+  border: 5px solid #f3f3f3; 
+  border-top: 5px solid #3498db; 
   border-radius: 50%;
   width: 30px;
   height: 30px;
   animation: spin 1s linear infinite;
-  margin: 10px auto; /* Centrer le loader */
+  margin: 10px auto; 
 }
 
 @keyframes spin {
@@ -332,7 +331,6 @@ input.form-select{
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x)* .5);
   padding-left: calc(var(--bs-gutter-x)* .5);
-  /* margin-top: var(--bs-gutter-y); */
 }
 
 .upload-container {
@@ -340,7 +338,7 @@ input.form-select{
 }
 
 .upload-input {
-  border: 2px dashed #ccc; /* Bordure pointillée */
+  border: 2px dashed #ccc;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -352,7 +350,7 @@ input.form-select{
 }
 
 .upload-input-file {
-  display: none; /* Masquer le champ de fichier par défaut */
+  display: none; 
 }
 
 .upload-icon {
@@ -360,5 +358,33 @@ input.form-select{
 }
 
 .upload-text {
-  color: #666; /* Couleur du texte */
+  color: #666;
+}
+@media screen and (min-width: 320px){
+  .navbar-brand {
+    display: flex;
+    margin-left: 6rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  .navbar-brand {
+    display: flex;
+    margin-left: 6rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (min-width: 1024px){
+  .navbar-brand {
+    display: flex;
+    margin-left:   18.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
 }
