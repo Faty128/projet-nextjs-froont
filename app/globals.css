@@ -311,7 +311,7 @@ input.form-select{
   width: 30px;
   height: 30px;
   animation: spin 1s linear infinite;
-  margin: 10px auto; 
+  margin: 8px auto; 
 }
 
 @keyframes spin {
