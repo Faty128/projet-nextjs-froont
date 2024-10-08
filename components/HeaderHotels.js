@@ -12,7 +12,7 @@ export default function HeaderHotels({ onAddHotel }) {
     email: "",
     phone: "",
     price: "",
-    currency: "XOF",
+    currency: "",
     image: null,
   });
 
@@ -47,7 +47,7 @@ export default function HeaderHotels({ onAddHotel }) {
         email: "",
         phone: "",
         price: "",
-        currency: "XOF",
+        currency: "",
         image: null,
       });
     } catch (error) {
@@ -86,10 +86,11 @@ export default function HeaderHotels({ onAddHotel }) {
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+              <form onSubmit={handleSubmit} className="forme">
             <div className="row modal-body">
-              <form onSubmit={handleSubmit} className="forme d-flex">
+
                 <div className="col-md-6">
-                  <div className="mb-3">
+                  <div className="mb-2">
                     <label htmlFor="hotelName" className="form-label">
                       Nom de l'hôtel
                     </label>
@@ -103,7 +104,7 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                     />
                   </div>
-                  <div className="mb-3">
+                  <div className="mb-2">
                     <label htmlFor="hotelLocation" className="form-label">
                       Adresse
                     </label>
@@ -117,7 +118,7 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                     />
                   </div>
-                  <div className="mb-3">
+                  <div className="mt-2">
                     <label htmlFor="hotelEmail" className="form-label">
                       E-mail
                     </label>
@@ -134,7 +135,7 @@ export default function HeaderHotels({ onAddHotel }) {
                 </div>
 
                 <div className="col-md-6">
-                  <div className="mb-3">
+                  <div className="mt-2">
                     <label htmlFor="hotelPhone" className="form-label">
                       Numéro de téléphone
                     </label>
@@ -148,7 +149,7 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                     />
                   </div>
-                  <div className="mb-3">
+                  <div className="mt-3">
                     <label htmlFor="hotelPrice" className="form-label">
                       Prix par nuit
                     </label>
@@ -162,7 +163,7 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                     />
                   </div>
-                  <div className="mb-3">
+                  <div className="mt-2">
                     <label htmlFor="hotelCurrency" className="form-label">
                       Devise
                     </label>
@@ -179,10 +180,10 @@ export default function HeaderHotels({ onAddHotel }) {
                     </select>
                   </div>
                 </div>
+            </div>
 
-               
-              </form>
-              <div className="mt-3 upload-container">
+                <div className="row col-md-12">
+                <div className=" upload-container">
                   <label htmlFor="hotelImage" className="form-label">
                     Ajouter une photo
                   </label>
@@ -204,13 +205,18 @@ export default function HeaderHotels({ onAddHotel }) {
                     <span className="upload-text">Ajouter un photo</span>
                   </div>
                 </div>
+                </div>
+                <div className="row col-md-12">
 
-                <div className="mt-5">
+                <div className="mt-2">
                   <button type="submit" className="btn3 btn-secondary">
                     Enregistrer
                   </button>
                 </div>
-            </div>
+                </div>
+
+              </form>
+             
           </div>
         </div>
         <ToastContainer autoClose={2000} />

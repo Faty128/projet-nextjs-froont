@@ -190,7 +190,9 @@ h1, h5 {
 }
 
 .headerhotel{
+  /* padding-top: 4rem; */
   padding-top: 7rem;
+
   margin: 0;
   height: 15%;
   /* margin-top: 5rem; */
@@ -262,19 +264,14 @@ font-weight: bold;
   font-weight: bold;
   }
 
-.modal-backdrop.show { 
-  /* opacity: var(--bs-backdrop-opacity) !important; */
- }
-
 .forme {
-  display: flex;
   gap: 1rem;
   padding: 1rem;
   justify-content: center;
   align-items: center;
   flex-direction: inherit;
-  /* flex-direction: none !important; */
 }
+
 .modal-content {
   position: relative;
   display: flex;
@@ -290,19 +287,21 @@ font-weight: bold;
   border-radius: var(--bs-modal-border-radius);
   outline: 0;
 }
+
 input.form{
   border: 1px solid #969696;
   border-radius: 0.7rem;
   width: 100%;
 }
+
 input.form-select{
   border: 1px solid #969696;
   border-radius: 1rem;
   width: 90%;
 }
+
 .btn3{
-  margin-left: 80%;
-  /* width: 100px; */
+  margin-left: 75%;
   border-radius: 0.5rem;
 }
 
