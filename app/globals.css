@@ -180,11 +180,10 @@ h1, h5 {
 }
 
 .header_dashboard{
-  /* padding: 5px; */
   margin: 0;
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1.2rem;
   height: 25%;
-  margin-top: 30px;
+  margin-top: -3rem;
   background-color: #fff;
 }
 
@@ -208,7 +207,7 @@ h1, h5 {
 
 .navbar-brand {
   display: flex;
-  margin-left:   18.5rem;
+  margin-left: 19rem;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -369,7 +368,6 @@ input.form-select{
   }
 }
 
-
 @media screen and (min-width: 768px){
   .navbar-brand {
     display: flex;
@@ -379,12 +377,21 @@ input.form-select{
   }
 }
 
-
 @media screen and (min-width: 1024px){
   .navbar-brand {
     display: flex;
-    margin-left:   18.5rem;
+    margin-left: 21rem;
     font-weight: bold;
     font-size: 1.5rem;
   }
 }
+.row {
+  --bs-gutter-x: 0.5rem !important;
+  --bs-gutter-y: 0. !important;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
+

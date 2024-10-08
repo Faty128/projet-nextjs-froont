@@ -19,7 +19,7 @@ export default function StatsCard({ title, count, icon, text }) {
               <p className="card-text mb-0">{count}</p>
               <h5 className="card-title mb-0 ms-2">{title}</h5>
             </div>
-            <p className="card-text mt-2">{text}</p>{" "}
+            <p className="card-text mt-0">{text}</p>
             {/* Texte sur la ligne suivante */}
           </div>
         </div>
