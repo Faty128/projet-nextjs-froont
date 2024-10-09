@@ -77,7 +77,7 @@ export default function Navbar() {
           </div>
         )}
 
-        <div className="d-flex align-items-center profillle">
+        <div className="d-flex align-items-center div_profillle">
           <div className="position-relative me-3">
             <MdOutlineNotifications style={{ fontSize: "1.6rem" }} />
             <span

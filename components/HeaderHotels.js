@@ -78,7 +78,9 @@ export default function HeaderHotels({ onAddHotel }) {
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title text-uppercase">← Créer un nouvel hôtel</h5>
+              <h5 className="modal-title text-uppercase">
+                ← Créer un nouvel hôtel
+              </h5>
               <button
                 type="button"
                 className="close"
@@ -92,7 +94,9 @@ export default function HeaderHotels({ onAddHotel }) {
               <div className="row modal-body">
                 <div className="col-md-6">
                   <div className="mb-2">
-                    <label htmlFor="hotelName" className="form-label">Nom de l'hôtel</label>
+                    <label htmlFor="hotelName" className="form-label">
+                      Nom de l'hôtel
+                    </label>
                     <input
                       type="text"
                       className="form"
@@ -104,7 +108,9 @@ export default function HeaderHotels({ onAddHotel }) {
                     />
                   </div>
                   <div className="mb-2">
-                    <label htmlFor="hotelLocation" className="form-label">Adresse</label>
+                    <label htmlFor="hotelLocation" className="form-label">
+                      Adresse
+                    </label>
                     <input
                       type="text"
                       className="form"
@@ -116,7 +122,9 @@ export default function HeaderHotels({ onAddHotel }) {
                     />
                   </div>
                   <div className="mt-2">
-                    <label htmlFor="hotelEmail" className="form-label">E-mail</label>
+                    <label htmlFor="hotelEmail" className="form-label">
+                      E-mail
+                    </label>
                     <input
                       type="email"
                       className="form"
@@ -131,7 +139,9 @@ export default function HeaderHotels({ onAddHotel }) {
 
                 <div className="col-md-6">
                   <div className="mt-2">
-                    <label htmlFor="hotelPhone" className="form-label">Numéro de téléphone</label>
+                    <label htmlFor="hotelPhone" className="form-label">
+                      Numéro de téléphone
+                    </label>
                     <input
                       type="tel"
                       className="form"
@@ -143,7 +153,9 @@ export default function HeaderHotels({ onAddHotel }) {
                     />
                   </div>
                   <div className="mt-3">
-                    <label htmlFor="hotelPrice" className="form-label">Prix par nuit</label>
+                    <label htmlFor="hotelPrice" className="form-label">
+                      Prix par nuit
+                    </label>
                     <input
                       type="text"
                       className="form"
@@ -155,7 +167,9 @@ export default function HeaderHotels({ onAddHotel }) {
                     />
                   </div>
                   <div className="mt-2">
-                    <label htmlFor="hotelCurrency" className="form-label">Devise</label>
+                    <label htmlFor="hotelCurrency" className="form-label">
+                      Devise
+                    </label>
                     <select
                       className="form-select"
                       id="hotelCurrency"
@@ -173,8 +187,15 @@ export default function HeaderHotels({ onAddHotel }) {
 
               <div className="row col-md-12">
                 <div className="upload-container">
-                  <label htmlFor="hotelImage" className="form-label">Ajouter une photo</label>
-                  <div className="upload-input" onClick={() => document.getElementById('hotelImage').click()}>
+                  <label htmlFor="hotelImage" className="form-label">
+                    Ajouter une photo
+                  </label>
+                  <div
+                    className="upload-input"
+                    onClick={() =>
+                      document.getElementById("hotelImage").click()
+                    }
+                  >
                     <input
                       type="file"
                       className="upload-input-file"
@@ -185,29 +206,36 @@ export default function HeaderHotels({ onAddHotel }) {
                       required
                       style={{ display: "none" }}
                     />
-                    <div className="upload-icon"><FaImage /></div>
-                    <span className="upload-text">
-                      {hotelData.image ? hotelData.image.name : "Ajouter une photo"}
-                    </span>
+                    {!hotelData.image ? ( // Affiche l'icône et le texte uniquement si aucune image n'est sélectionnée
+                      <div className="upload-placeholder">
+                        <div className="upload-icon">
+                          <FaImage />
+                        </div>
+                        <span className="upload-text">Ajouter une photo</span>
+                      </div>
+                    ) : (
+                      <>
+                        <img
+                          src={URL.createObjectURL(hotelData.image)}
+                          alt="Aperçu"
+                          className="image-preview"
+                        />
+                        <span className="upload-text">
+                          {hotelData.image.name}
+                        </span>
+                      </>
+                    )}
                   </div>
-                  {hotelData.image && (
-                    <img
-                      src={URL.createObjectURL(hotelData.image)}
-                      alt="Aperçu"
-                      style={{
-                        width: "100%",
-                        maxHeight: "200px",
-                        objectFit: "cover",
-                        marginTop: "10px",
-                      }}
-                    />
-                  )}
                 </div>
               </div>
 
               <div className="row col-md-12">
                 <div className="mt-2">
-                  <button type="submit" className="btn3 btn-secondary" disabled={loading}>
+                  <button
+                    type="submit"
+                    className="btn3 btn-secondary"
+                    disabled={loading}
+                  >
                     {loading ? "Enregistrement..." : "Enregistrer"}
                   </button>
                 </div>
@@ -219,7 +247,10 @@ export default function HeaderHotels({ onAddHotel }) {
       </div>
 
       {modalShow && (
-        <div className="modal-backdrop fade show" onClick={() => setModalShow(false)}></div>
+        <div
+          className="modal-backdrop fade show"
+          onClick={() => setModalShow(false)}
+        ></div>
       )}
     </>
   );

@@ -18,8 +18,9 @@ export default function Sidebar() {
       <button className="close_icone" onClick={toggleSidebarCollapseHandler}>
         <MdKeyboardArrowLeft />
       </button>
-
-      <aside className="text-white sidebar" data-collapse={isCollapsedSidebar}>
+      {/* className={`text-white sidebar ${isCollapsedSidebar ? 'collapsed' : ''}`} */}
+      <aside className={`text-white sidebar ${isCollapsedSidebar ? 'collapsed' : ''}`} data-collapse={isCollapsedSidebar}>
+      
         <div className="p-4">
           <div className="d-flex">
             <img
