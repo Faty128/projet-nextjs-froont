@@ -14,11 +14,13 @@ const page = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [loading, setLoading] = useState(false); 
   const router = useRouter(); 
 
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+  setLoading(true);
 
   if (!termsAccepted) {
     toast.error("Vous devez accepter les termes et la politique !");
@@ -43,6 +45,8 @@ const handleSubmit = async (e) => {
   } catch (error) {
     console.error(error);
     toast.error('Échec de l\'inscription. Veuillez réessayer.');
+  }finally {
+    setLoading(false);
   }
 };
 
@@ -60,6 +64,9 @@ const handleSubmit = async (e) => {
           />
             <p className='login_name'>RED PRODUCT</p>
       </div>
+
+      {loading && <div className="loader"></div>}
+
       <form onSubmit={handleSubmit} className='pagelogin'>
         <h1 className='titree'>Inscrivez-vous en tant que Admin</h1>
         <div className='div_form'>
@@ -99,7 +106,8 @@ const handleSubmit = async (e) => {
             <p>Accepter les termes et la politique</p>
           </label>
         </div>
-        <button type="submit">S'inscrire</button>
+        <button disabled={loading}> {/* Désactiver le bouton pendant le chargement */}
+        {loading ? 'Chargement...' : 'S\' inscrire'} {/* Afficher le texte en fonction du chargement */}</button>
       </form>
       <div className='div_link'> 
         <p className='div_link2'>
