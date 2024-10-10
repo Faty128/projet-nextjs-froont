@@ -12,7 +12,7 @@ export default function RootLayout({
         <div className="d-flex">
           {/* <Sidebar />   */}
           {/* Barre latérale commune */}
-          <div className="flex-grow-1 div_container row col-md-3">
+          <div className="flex-grow-1  col-md-3">
             <main className=''>{children}</main>  {/* Le contenu des layouts spécifiques */}
           </div>
         </div>

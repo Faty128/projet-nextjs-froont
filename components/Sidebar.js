@@ -7,19 +7,19 @@ import Link from "next/link"; // Importation de Link
 
 export default function Sidebar() {
   const [activeLink, setActiveLink] = useState("dashboard"); // État pour le lien actif
-  const [isCollapsedSidebar, setIsCollapsedSidebar] = useState(false);
+  // const [isCollapsedSidebar, setIsCollapsedSidebar] = useState(false);
 
-  const toggleSidebarCollapseHandler = () => {
-    setIsCollapsedSidebar((prev) => !prev);
-  };
+  // const toggleSidebarCollapseHandler = () => {
+  //   setIsCollapsedSidebar((prev) => !prev);
+  // };
 
   return (
-    <div className="sidebar_wrapper  row col-md-3">
-      <button className="close_icone" onClick={toggleSidebarCollapseHandler}>
+    <div className="sidebar_wrapper">
+      {/* <button className="close_icone">
         <MdKeyboardArrowLeft />
-      </button>
+      </button> */}
       {/* className={`text-white sidebar ${isCollapsedSidebar ? 'collapsed' : ''}`} */}
-      <aside className={`text-white sidebar ${isCollapsedSidebar ? 'collapsed' : ''}`} data-collapse={isCollapsedSidebar}>
+      <aside className="text-white sidebar">
       
         <div className="p-4">
           <div className="d-flex">

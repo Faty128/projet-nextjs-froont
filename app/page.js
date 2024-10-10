@@ -17,9 +17,7 @@ export default function Home() {
   return (
     <div style={{ display: 'flex' }}>
       <div style={{ flex: 1, padding: '20px' }}>
-      {/* {children} */}
-    {/* <Sidebar/ >
-    <Navbar/ > */}
+  
     </div>
     </div>
   );

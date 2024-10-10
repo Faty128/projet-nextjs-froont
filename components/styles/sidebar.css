@@ -1,16 +1,17 @@
 .sidebar {
+  /* position: relative; */
+
     color: white;
-    position: fixed; 
-    top: 0;
-    left: 0;
+    
     width: 290px; 
-    height: 100%; 
+    height: 100vh; 
     background-color: #343a40;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   }
 
   .sidebar_wrapper {
-    position: relative;
+    position: fixed; 
+
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -115,3 +116,25 @@
 [data-collapse="true"] .div_personel{
   display: none;
 }
+
+@media screen and (min-width: 320px){
+  .sidebar {
+    /* position: relative; */
+  
+      color: white;
+      
+      width: 100%; 
+      height: 100%; 
+    }
+}
+
+@media screen and (min-width: 768px){
+  .sidebar {
+    /* position: relative; */
+  
+      color: white;
+      
+      width: 290px; 
+      height: 100vh; 
+    }
+} 

@@ -31,9 +31,9 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container mb-4">
         <HeaderDashboard />
-        <div className="row mb-3 g-3">
+        <div className="row p-4 g-4">
           <div className="col-md-4">
             <div className="card-categories">
               <div className="div_categorie">
@@ -74,7 +74,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="row g-3">
+        <div className="row p-4 g-4">
           <div className="col-md-4">
             <Link href="/hotels" className="text-decoration-none text-dark">
               <div className="card-categories">

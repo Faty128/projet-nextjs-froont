@@ -49,7 +49,7 @@ const LoginPage = () => {
 
   return (
     <div className="login_bodyy">
-      <div style={{ maxWidth: '400px', margin: 'auto', padding: '0.5rem'}}>
+      <div style={{ margin: 'auto', padding: '0.5rem'}}>
         <div className='login_top'>
           <Image 
             src="/images/Link → SVG.png" 
