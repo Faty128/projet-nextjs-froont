@@ -40,8 +40,8 @@ export default function Navbar() {
   return (
     <nav className="navbar fixed-top shadow-sm">
       <div className="container-fluid">
-        <div>
-          <a className="navbar-brand" href="#">
+        <div className="navbar_brand" >
+          <a href="#">
             Dashboard
           </a>
         </div>

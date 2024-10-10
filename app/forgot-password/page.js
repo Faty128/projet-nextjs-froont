@@ -36,7 +36,7 @@ const Page = () => {
   };
 
   return (
-    <div className="body">
+    <div className="login_bodyy">
       <div style={{ maxWidth: "400px", margin: "auto", padding: "25px" }}>
         <div className="login_top">
           <Image

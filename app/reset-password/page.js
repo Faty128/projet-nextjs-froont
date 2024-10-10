@@ -41,7 +41,7 @@ const ResetPasswordPage = () => {
   };
 
   return (
-    <div className="body">
+    <div className="login_bodyy">
       <div style={{ maxWidth: "400px", margin: "auto", padding: "2rem" }}>
         <div className="login_top pt-4">
           <Image

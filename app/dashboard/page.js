@@ -31,7 +31,7 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <div className="container-fluid">
+      <div className="container">
         <HeaderDashboard />
         <div className="row mb-3 g-3">
           <div className="col-md-4">
